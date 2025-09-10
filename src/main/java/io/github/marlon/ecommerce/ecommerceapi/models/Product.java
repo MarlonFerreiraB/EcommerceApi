@@ -17,12 +17,13 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "produtos")
+
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String name;
-    private Integer preco;
+    private Integer price;
 
     @ManyToMany
     @JoinTable(
