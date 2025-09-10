@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -20,5 +21,5 @@ public class Category {
     private UUID id;
     private String name;
     @ManyToMany(mappedBy = "categories")
-    private Product product;
+    private Set<Product> products;
 }
